@@ -83,7 +83,8 @@ def create_quiz():
             abort(400, "Invalid request body. JSON data expected.")
 
         question = data.get("question")
-        options = data.get("options")
+        options_raw = data.get("options")
+        options = [option.strip() for option in options_raw.split(",")]
         right_answer = int(data.get("rightAnswer"))
         start_date = datetime.fromisoformat(data.get("startDate"))
         end_date = datetime.fromisoformat(data.get("endDate"))
