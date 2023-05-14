@@ -1,0 +1,6 @@
+flask
+pymongo[srv]
+gunicorn
+python-dotenv
+apscheduler
+flask-limiter[mongodb]
