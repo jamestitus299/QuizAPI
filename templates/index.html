@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QuizAPI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100">
+  <nav class="bg-blue-500 p-4">
+    <h1 class="text-white text-2xl font-bold">QuizAPI</h1>
+  </nav>
+
+  <div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-xl p-8 bg-white rounded shadow text-center mb-8">
+      <h1 class="text-2xl font-bold mb-6">Welcome to QuizAPI</h1>
+      <p class="text-lg mb-2">Create your Quizes easily using QuizAPI.</p>
+      <p class="text-lg mb-6">Read the documentation for details.</p>
+      <a href="#" class="text-blue-500 underline">Get Started</a>
+    </div>
+  </div>
+
+  <div class="flex-grow flex items-center justify-center">
+    <div class="max-w-xl p-8 bg-white rounded shadow">
+      <h1 class="text-2xl font-bold mb-6">Create Quiz</h1>
+      <form action="/quizzes" method="POST">
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" class="border border-gray-300 px-3 py-2 rounded mb-4"><br>
+
+        <label for="options">Options (comma-separated):</label><br>
+        <input type="text" id="options" name="options" class="border border-gray-300 px-3 py-2 rounded mb-4"><br>
+
+        <label for="rightAnswer">Index of Correct Answer:</label><br>
+        <input type="number" id="rightAnswer" name="rightAnswer" class="border border-gray-300 px-3 py-2 rounded mb-4"><br>
+
+        <label for="startDate">Start Date:</label><br>
+        <input type="datetime-local" id="startDate" name="startDate" class="border border-gray-300 px-3 py-2 rounded mb-4"><br>
+
+        <label for="endDate">End Date:</label><br>
+        <input type="datetime-local" id="endDate" name="endDate" class="border border-gray-300 px-3 py-2 rounded mb-4"><br>
+
+        <input type="submit" value="Create Quiz" class="bg-blue-500 text-white px-4 py-2 rounded">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
