@@ -177,7 +177,14 @@ def get_quiz_result(quiz_id):
         if now < result_available_time:
             abort(403, "Result not available yet! Try after the quiz has ended.")
 
-        return jsonify({"result": quiz["right_answer"]})
+        return jsonify(
+            {
+                "id": str(quiz["_id"]),
+                "question": quiz["question"],
+                "options": quiz["options"],
+                "result": quiz["right_answer"]
+            }
+        )
 
     except InvalidId:
         abort(400, "Invalid quiz ID")
