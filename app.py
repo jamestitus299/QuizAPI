@@ -61,7 +61,7 @@ def update_quiz_status():
 
 
 # Status Updater -- runs every 5 minutes
-scheduler.add_job(update_quiz_status, "interval", minutes=5)
+scheduler.add_job(update_quiz_status, "interval", minutes=1)
 
 
 # Api home page -- documentation
