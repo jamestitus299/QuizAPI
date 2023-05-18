@@ -76,7 +76,6 @@ def home():
 @limiter.limit("10 per minute")
 def create_quiz():
     if request.headers["Content-Type"] == "application/json":  # JSON data
-        json_data = request.get_json()
         data = request.get_json()
 
         if data is None:
